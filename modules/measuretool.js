@@ -1,5 +1,5 @@
 define(['esri/dijit/Measurement'
-       ,'esri/Units'
+       ,'esri/units'
        ,'dojo/aspect'
        ,'dojo/dom-class'
        ,'dojo/on'

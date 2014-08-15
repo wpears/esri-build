@@ -1,7 +1,7 @@
 var profile = (function(){
   return {
     basePath:'./',
-    releaseDir:'./build818',
+    releaseDir:'./build8191',
     action:'release',
     cssOptimize: 'comments',
     mini: true,
@@ -210,8 +210,14 @@ var profile = (function(){
           'dojox/lang/utils',
           'dojox/main',
           'dojox/timing/_base',
-          'dojox/xml/parser',
-          'esri/_coremap',
+          'dojox/xml/parser'
+          ],
+        customBase:true,
+        boot:true
+      },
+      "esri/esri":{
+        include:[
+         'esri/_coremap',
           'esri/config',
           'esri/deferredUtils',
           'esri/dijit/_EventedWidget',
@@ -241,7 +247,7 @@ var profile = (function(){
           'esri/geometry/ScreenPoint',
           'esri/geometry/screenUtils',
           'esri/geometry/webMercatorUtils',
-          'esri/Units',
+          'esri/units',
           'esri/graphic',
           'esri/graphicsUtils',
           'esri/InfoTemplate',
@@ -350,9 +356,7 @@ var profile = (function(){
           'esri/urlUtils',
           'esri/utils',
           'esri/WKIDUnitConversion'
-          ],
-        customBase:true,
-        boot:true
+        ]
       },
       "dgrid/dgrid":{
         include:[
