@@ -1,7 +1,7 @@
 var profile = (function(){
   return {
     basePath:'./',
-    releaseDir:'./build635',
+    releaseDir:'./build818',
     action:'release',
     cssOptimize: 'comments',
     mini: true,
@@ -25,7 +25,8 @@ var profile = (function(){
       {name:"dgrid",location:"./dgrid"},
       {name:"esri",location:"./esri"},
       {name:"xstyle",location:"./xstyle"},
-      {name:"put-selector",location:"./put-selector"}
+      {name:"put-selector",location:"./put-selector"},
+      {name:"modules",location:"./modules"}
     ],
     layers:{
       "dojo/dojo":{
@@ -364,6 +365,36 @@ var profile = (function(){
           'xstyle/css',
           'xstyle/has-class',
           'xstyle/load-css'
+        ]
+      },
+      "modules/modules":{
+        include:[
+          "modules/addsymbol",
+          "modules/addtextsymbol",
+          "modules/basemap",
+          "modules/canvasidentify",
+          "modules/cleargraphics",
+          "modules/clearnode",
+          "modules/colorrampobject",
+          "modules/crosstool",
+          "modules/elementcache",
+          "modules/featureevents",
+          "modules/geosearch",
+          "modules/getdate",
+          "modules/gridcategory",
+          "modules/gridconnector",
+          "modules/gridsorter",
+          "modules/identify",
+          "modules/identtool",
+          "modules/measuretool",
+          "modules/popup",
+          "modules/settoolvisibility",
+          "modules/setvisiblerasters",
+          "modules/splice",
+          "modules/symbols",
+          "modules/tools",
+          "modules/tooltip",
+          "modules/zoomlevel"
         ]
       }
     }
