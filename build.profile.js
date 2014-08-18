@@ -159,8 +159,7 @@ var profile = (function(){
           'dijit/Tooltip',
           'dijit/typematic',
           'dijit/Viewport'
-          ],
-          includeLocales:['en-us'],
+        ],
         customBase:true,
         boot:true
       },
@@ -281,7 +280,6 @@ var profile = (function(){
           'esri/layers/LabelClass',
           'esri/layers/layer',
           'esri/layers/LayerDataSource',
-          'esri/layers/LayerDrawingOptions',
           'esri/layers/LayerInfo',
           'esri/layers/LayerMapSource',
           'esri/layers/LayerSource',
@@ -306,7 +304,6 @@ var profile = (function(){
           'esri/map',
           'esri/MapNavigationManager',
           'esri/MouseEvents',
-          'esri/nls/jsapi',
           'esri/PointerEvents',
           'esri/PopupBase',
           'esri/PopupInfo',
@@ -413,8 +410,7 @@ var profile = (function(){
           'dojox/main',
           'dojox/timing/_base',
           'dojox/xml/parser'
-        ],
-        includeLocales:['en-us']
+        ]
       },
       "dgrid/dgrid":{
         include:[
@@ -427,8 +423,7 @@ var profile = (function(){
           'xstyle/css',
           'xstyle/has-class',
           'xstyle/load-css'
-        ],
-        includeLocales:['en-us']
+        ]
       },
       "modules/modules":{
         include:[
@@ -578,8 +573,7 @@ var profile = (function(){
           'dojox/main',
           'dojox/timing/_base',
           'dojox/xml/parser'
-        ],
-        includeLocales:['en-us']
+        ]
       }
     }
   }
