@@ -141,13 +141,6 @@ function( addSymbol
         });
       }
 
-      function addCSS(name){
-        var firstScript = DOC.getElementsByTagName('script')[0]
-          , css = DOC.createElement('link');
-        css.rel ='stylesheet';
-        css.href =name||'modules/identtool.css';
-        firstScript.parentNode.insertBefore(css,firstScript);
-      }
 
       return {
         handlers:[],
@@ -155,7 +148,6 @@ function( addSymbol
         labels:[],
         init:function(e){
           self = this;
-          addCSS();
           function handleClick(e){
             if(domClass.contains(ident,"clickable"))
               return tools.toggle(e, self);

@@ -6,8 +6,7 @@ var profile = (function(){
     var copyOnly = function(filename, mid){
               var list = {
                 "modules/package.json":          1,
-                "modules/modules.profile.js":    1,
-                "modules/modules.js":            1
+                "modules/modules.profile.js":    1
               };
               return (mid in list);
             };

@@ -1,12 +1,12 @@
 var profile = (function(){
   return {
     basePath:'./',
-    releaseDir:'./build8198',
+    releaseDir:'./build818',
     action:'release',
     cssOptimize: 'comments',
     mini: true,
-    optimize: 'uglify',
-    layerOptimize: 'uglify',
+    optimize: 'closure',
+    layerOptimize: 'closure',
     stripConsole: 'all',
     selectorEngine: 'acme',
 
@@ -212,6 +212,7 @@ var profile = (function(){
           'dojox/timing/_base',
           'dojox/xml/parser'
           ],
+          includeLocales:['en-us'],
         customBase:true,
         boot:true
       },
@@ -356,7 +357,8 @@ var profile = (function(){
           'esri/urlUtils',
           'esri/utils',
           'esri/WKIDUnitConversion'
-        ]
+        ],
+        includeLocales:['en-us']
       },
       "dgrid/dgrid":{
         include:[
@@ -369,11 +371,11 @@ var profile = (function(){
           'xstyle/css',
           'xstyle/has-class',
           'xstyle/load-css'
-        ]
+        ],
+        includeLocales:['en-us']
       },
       "modules/modules":{
         include:[
-          "modules/main",
           "modules/addsymbol",
           "modules/addtextsymbol",
           "modules/basemap",
@@ -459,8 +461,18 @@ var profile = (function(){
           'esri/dijit/Measurement',
           'esri/geometry/geodesicUtils',
           'esri/units',
-          'esri/dijit/_EventedWidget'
-        ]
+          'esri/dijit/_EventedWidget',
+          'dgrid/editor',
+          'dgrid/extensions/ColumnResizer',
+          'dgrid/Grid',
+          'dgrid/List',
+          'dgrid/util/misc',
+          'put-selector/put',
+          'xstyle/css',
+          'xstyle/has-class',
+          'xstyle/load-css'
+        ],
+        includeLocales:['en-us']
       }
     }
   }
