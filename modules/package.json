@@ -9,9 +9,11 @@
   
   "homepage": "http://github.com/wpears/bathcat",
 
+  "main": "main",
+
   "directories": {
     "lib": "."
   },
   
-  "dojoBuild": "profile.js"
+  "dojoBuild": "modules.profile.js"
 }
