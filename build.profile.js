@@ -160,6 +160,7 @@ var profile = (function(){
           'dijit/typematic',
           'dijit/Viewport'
         ],
+        includeLocales:['en-us'],
         customBase:true,
         boot:true
       },

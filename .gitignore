@@ -6,6 +6,7 @@ esri/
 put-selector/
 util/
 xstyle/
+modules/
 build*/
 built/
 node_modules/
