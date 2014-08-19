@@ -7,4 +7,5 @@ put-selector/
 util/
 xstyle/
 build*/
+built/
 node_modules/

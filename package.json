@@ -12,5 +12,11 @@
     "url": "https://github.com/wpears/esri-amd/issues"
   },
   "homepage": "https://github.com/wpears/esri-amd",
-  "dojoBuild":"build.profile.js"
+  "repository": "https://github.com/wpears/esri-amd.git",
+  "dojoBuild": "build.profile.js",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-run": "~0.2.3",
+    "grunt-contrib-uglify": "~0.5.1"
+  }
 }
