@@ -1,7 +1,6 @@
 var profile = (function(){
   return {
     basePath:'./',
-    releaseDir:'./built',
     action:'release',
     cssOptimize: 'comments',
     mini: true,

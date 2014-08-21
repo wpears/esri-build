@@ -1,4 +1,31 @@
+var fs = require('fs');
+var rimraf = require('rimraf');
+var async = require('async');
+
+function getBuildTag(){
+  return (Date.now()/100000 >>0).toString();
+}
+
 module.exports = function(grunt){
+
+  var buildDir = 'build'+getBuildTag()+'/';
+  var jsMin = buildDir + 'modules/modules.js';
+
+  var uglifyFiles = {};
+
+  uglifyFiles[jsMin] = [jsMin+'.uncompressed.js'];
+
+  var dojoArgs = [
+        'dojo/dojo.js',
+        'load=build',
+        '-p',
+        'build.profile.js',
+        '-r',
+        'releaseDir='+buildDir
+      ]
+
+
+
   //dojo build will always warn/error, if this gruntfile expands, consider forcing 'run' alone
   grunt.option('force', true);
 
@@ -9,21 +36,13 @@ module.exports = function(grunt){
         compress:true
       },
       my_target:{
-        files:{
-          './built/modules/modules.js':['./built/modules/modules.js.uncompressed.js']
-        }
+        files:uglifyFiles
       }
     },
   run: {
     build:{
       cmd: 'node',
-      args: [
-        'dojo/dojo.js',
-        'load=build',
-        '-p',
-        'build.profile.js',
-        '-r'
-      ]
+      args: dojoArgs
     }
   }
   })
@@ -31,6 +50,8 @@ module.exports = function(grunt){
   
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-run");
+
+  grunt.loadTasks('./tasks/') //clean
 
 
   grunt.registerTask('default',['run:build','uglify'])
