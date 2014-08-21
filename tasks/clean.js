@@ -13,7 +13,7 @@ module.exports = function(grunt){
 
       if(err){
         grunt.log.error("\nError checking for old builds.\n");
-        done();
+        return done();
       }
 
       var buildReg = /build\d{8}/; //Will break in November 2286!
@@ -30,7 +30,7 @@ module.exports = function(grunt){
       async.each(builds,rimraf,function(err){
         if(err){
           grunt.log.error("\nDidn't delete builds properly.\n");
-          done();
+          return done();
         }
         grunt.log.writeln("\nBuilds cleaned.\n")
         done();
