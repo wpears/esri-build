@@ -429,6 +429,7 @@ var profile = (function(){
         include:[
           "modules/addsymbol",
           "modules/addtextsymbol",
+          "modules/animationtool",
           "modules/basemap",
           "modules/canvasidentify",
           "modules/cleargraphics",
@@ -439,6 +440,7 @@ var profile = (function(){
           "modules/featureevents",
           "modules/geosearch",
           "modules/getdate",
+          "modules/getrasterurl",
           "modules/gridcategory",
           "modules/gridconnector",
           "modules/gridsorter",
