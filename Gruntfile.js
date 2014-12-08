@@ -9,6 +9,7 @@ function getBuildTag(){
 module.exports = function(grunt){
 
   var buildDir = 'build'+getBuildTag()+'/';
+  var homeDir = '../bathymetry/js/'
   var jsMin = buildDir + 'modules/modules.js';
 
   var uglifyFiles = {};
@@ -44,15 +45,28 @@ module.exports = function(grunt){
       cmd: 'node',
       args: dojoArgs
     }
+  },
+  copy: {
+      deploy: {
+        files:[
+          {
+            expand:true,
+            cwd: buildDir + "modules/",
+            src: ['modules.js'],
+            dest: homeDir
+          }
+        ]
+      }
   }
   })
 
   
   grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks("grunt-run");
 
   grunt.loadTasks('./tasks/') //clean
 
 
-  grunt.registerTask('default',['run:build','uglify'])
+  grunt.registerTask('default',['run:build','uglify','copy:deploy'])
 };
